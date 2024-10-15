@@ -2,14 +2,14 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';  // Ensure this import is correct
+import { useRouter } from 'next/navigation';  
 import CustomButton from './CustomButton';
 
 const NavBar = () => {
-  const router = useRouter();  // Ensure this is initialized properly
+  const router = useRouter();  
 
   const handleSignInClick = () => {
-    router.push('/dashboard');  // Ensure this is the correct route
+    router.push('/dashboard');  
   };
 
   return (
@@ -19,7 +19,7 @@ const NavBar = () => {
           <Image src="/logo.svg" alt="car hub logo" width={118} height={18} className="object-contain" />
         </Link>
 
-        {/* Home, Contact Us, and Sign In Button */}
+        
         <div className="flex items-center gap-6">
           <Link href="/" className="text-primary-blue rounded-full bg-white hover:text-gray-300">
             Home
@@ -32,7 +32,7 @@ const NavBar = () => {
             title="Sign In"
             btnType="button"
             containerStyles="text-primary-blue rounded-full bg-white min-w-[130px] hover:text-gray-300"
-            handleClick={handleSignInClick}  // Ensure handleClick is passed here
+            handleClick={handleSignInClick}  
           />
         </div>
       </nav>
